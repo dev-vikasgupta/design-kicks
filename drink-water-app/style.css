@@ -74,7 +74,11 @@ h3 {
   color: var(--border-color);
   border-radius: 0 0 40px 40px;
   font-size: 30px;
+  height: 0;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .text {
   text-align: center;
