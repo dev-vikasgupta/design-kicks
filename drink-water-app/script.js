@@ -18,28 +18,42 @@
   const highlightCup = (idx) => {
     const currentSelectedCup = idx
     const isItFilled = cups[idx].classList.contains('full')
-    cups.forEach((cup, idx) => {
-      if (currentSelectedCup !== idx) cup.classList.remove('full')
-    })
+    const isNextFilled =
+      cups[idx].nextElementSibling &&
+      cups[idx].nextElementSibling.classList.contains('full')
     let totalDrank = 0
-    if (isItFilled) {
+    if (isItFilled && !isNextFilled) {
       idx--
       totalDrank = currentSelectedCup * 250
     } else {
       totalDrank = (currentSelectedCup + 1) * 250
     }
+    cups.forEach((cup, idxLoop) => {
+      if (idxLoop <= idx) {
+        cup.classList.add('full')
+      } else {
+        cup.classList.remove('full')
+      }
+    })
     const totalDrankInPercentage = (totalDrank / capacity) * 100
+    // Total Remained in Litre
     const totalRemained = (capacity - totalDrank) / 1000
     litres.innerText = `${totalRemained}L`
+    // Total Drank in Percentage
     percentage.innerText = `${totalDrankInPercentage}%`
-    cups[currentSelectedCup].classList.toggle('full')
-    console.log('scale', scale(totalDrank, 0, capacity, 0, 100))
-    percentage.style.height = `${totalDrankFilledHeight(
-      totalDrankInPercentage
-    )}px`
-    while (idx > -1) {
-      cups[idx].classList.add('full')
-      idx--
+    if (capacity === totalDrank) {
+      remained.style.display = 'none'
+    } else {
+      remained.style.display = 'flex'
+    }
+    if (!totalDrank) {
+      percentage.style.visibility = 'hidden'
+      percentage.style.height = `0px`
+    } else {
+      percentage.style.visibility = 'visible'
+      percentage.style.height = `${totalDrankFilledHeight(
+        totalDrankInPercentage
+      )}px`
     }
   }
 })()
