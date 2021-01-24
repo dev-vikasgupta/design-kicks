@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Muli, sans-serif;
+}
+#random-choice-picker {
+  background-color: #2b88f0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* make default body height to it's view */
+}
+#random-choice-picker .container {
+  width: 500px;
+}
+#random-choice-picker h3 {
+  color: #fff;
+  margin: 10px 0 20px;
+}
+#random-choice-picker #textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-family: inherit;
+  margin: 0 0 10px;
+  border: none;
+  font-size: 1em;
+}
+#random-choice-picker .tag {
+  background-color: #f0932b;
+  color: #fff;
+  padding: 0.8em 1.2em;
+  border-radius: 50px;
+  margin: 0 5px 10px 0;
+  font-size: 0.9em;
+  display: inline-block;
+  transform: scale(1, 1);
+}
+#random-choice-picker .tag.highlight {
+  background-color: #273c75;
+  transform: scale(0.9, 0.9);
+}

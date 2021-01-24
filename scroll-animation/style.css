@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+}
+#scrollAnimation {
+  /* Main Container */
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+#scrollAnimation h1 {
+  margin: 10px;
+  font-size: 45px;
+}
+#scrollAnimation .box {
+  /* Boxes Inside */
+  background-color: steelblue;
+  color: white;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  /* Initially All boxes on Outside of screen (rightmost) */
+  transform: translateX(200vw);
+  transition: transform 0.3s ease;
+} /* Initially boxes in even order on Outside of screen in left */
+#scrollAnimation .box:nth-of-type(even) {
+  transform: translateX(-200vw);
+}
+/* On Adding Class Show, They move to Original Position (Center)  */
+#scrollAnimation .box.show {
+  transform: translateX(0%);
+}

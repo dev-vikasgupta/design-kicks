@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto Mono, sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* make default body height to it's view */
+  background-color: #8e44ad;
+  color: #fff;
+}
+.count-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px 80px;
+  text-align: center;
+}
+.count-container .counter {
+  font-size: 60px;
+  margin-top: 20px;
+}
+@media (max-width: 580px) {
+  body {
+    flex-direction: column;
+  }
+}

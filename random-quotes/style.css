@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, sans-serif;
+  overflow: hidden;
+}
+#random-quotes {
+  background-color: #686de0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 98vh; /* make default body height to it's view */
+  padding: 20px;
+}
+#random-quotes > .container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), 0px 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 50px 20px;
+  width: 800px;
+  max-width: 100%;
+  text-align: center;
+}
+#random-quotes h3 {
+  margin: 0;
+  opacity: 0.5;
+  letter-spacing: 2px;
+}
+#random-quotes .quote {
+  display: block;
+  font-style: normal;
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 50px;
+  margin: 50px auto;
+  max-width: 600px;
+}
+#random-quotes .quote::before {
+  content: open-quote;
+  font-size: xxx-large;
+  margin-right: 10px;
+}
+#random-quotes .quote::after {
+  content: close-quote;
+  font-size: xxx-large;
+}
+#random-quotes .anotherQuote {
+  background-color: #9f68e0;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 14px 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#random-quotes .anotherQuote:focus {
+  outline: 0;
+}
+#random-quotes .anotherQuote:active {
+  transform: scale(0.98);
+}
+#random-quotes .author {
+  text-align: right;
+  font-style: italic;
+  opacity: 0.8;
+  margin: 10px auto;
+}

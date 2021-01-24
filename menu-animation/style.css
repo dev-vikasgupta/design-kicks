@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+#rotating-menu {
+  /* Body Container for project */
+  font-family: 'Lato', sans-serif;
+  background-color: #333;
+  color: #222;
+  margin: 0;
+  overflow-x: hidden;
+}
+#rotating-menu > .container {
+  /* Base Container */
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 60px;
+}
+#rotating-menu .circle-container {
+  /* Small Container on Top Left */
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+#rotating-menu .circle-container > .circle {
+  /* Circle Inside on Top Left */
+  background-color: #ff7979;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+#rotating-menu .circle-container > .circle > button {
+  /* Buttons on Top Left inside circle*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+#rotating-menu .circle-container > .circle > button:focus {
+  outline: none;
+}
+#rotating-menu .circle-container > .circle > button#open {
+  left: 60%;
+}
+#rotating-menu .circle-container > .circle > button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+#rotating-menu nav {
+  /* Circle Inside on bottom left */
+  position: fixed;
+  left: 0;
+  bottom: 40px;
+  z-index: 100;
+}
+#rotating-menu nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+#rotating-menu nav ul li {
+  /* ListItem in bottom left nav*/
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+#rotating-menu nav ul li > i {
+  /* Icon in ListItem bottom left nav*/
+  font-size: 20px;
+  margin-right: 10px;
+}
+/* Positioning ListItem bottom left nav*/
+#rotating-menu nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+#rotating-menu nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+#rotating-menu nav ul li > i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+#rotating-menu .content {
+  width: 1000px;
+  margin: 50px auto;
+}
+#rotating-menu .content h1 {
+  margin: 0;
+}
+#rotating-menu .content small {
+  font-style: italic;
+  color: #555;
+}
+
+#rotating-menu .content p {
+  color: #333;
+  line-height: 1.5;
+}
+/* When navbar is active */
+#rotating-menu > .container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+#rotating-menu > .container.show-nav {
+  transform: rotate(-20deg);
+}
+#rotating-menu > .container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Roboto, sans-serif;
+}
+/* Main Container */
+#searchbar {
+  background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* make default body height to it's view */
+}
+/* Search Div */
+#searchbar .search {
+  position: relative;
+  height: 50px;
+}
+/* The Hidden Input Element */
+#searchbar .search > .input {
+  background-color: #fff;
+  font-size: 18px;
+  height: 50px; 
+  width: 50px; /* Initial Width is Same as Search Icon*/
+  border: 0;
+  padding: 15px;
+  transition: width 0.3s ease;
+}
+#searchbar .search > .btn {
+  background-color: #fff;
+  border: 0;
+  height: 50px;
+  width: 50px; /* Search Button */
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+#searchbar .search > .input:focus,
+#searchbar .search > .btn:focus {
+  outline: 0;
+}
+/* When Search Div is active, set Input Element Width to 200px */
+#searchbar .search.active > .input {
+  width: 200px;
+}
+/* Slide the Input button in X Axis as per input element width */
+#searchbar .search.active > .btn {
+  transform: translateX(200px);
+}

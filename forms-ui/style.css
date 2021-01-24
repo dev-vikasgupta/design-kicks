@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+:root {
+  --bg: steelblue;
+  --text: #fff;
+}
+body {
+  font-family: Roboto, sans-serif;
+  overflow: hidden;
+  margin: 0;
+}
+#forms-ui {
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* make default body height to it's view */
+}
+#forms-ui > .container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+#forms-ui > .container > h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+#forms-ui > .container > form .text {
+  margin-top: 30px;
+}
+#forms-ui > .container form a {
+  text-decoration: none;
+  color: lightblue;
+}
+#forms-ui > .container .form-group {
+  position: relative;
+  width: 300px;
+  margin: 20px 0 40px;
+}
+#forms-ui > .container form > .form-group label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+#forms-ui > .container .form-group > input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: var(--text);
+}
+#forms-ui > .container .form-group > input:focus,
+#forms-ui > .container .form-group > input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+#forms-ui > .container > form .btn {
+  width: 100%;
+  padding: 15px;
+  background-color: lightblue;
+  font-size: 18px;
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#forms-ui > .container > form .btn:focus {
+  outline: 0;
+}
+#forms-ui > .container > form .btn:active {
+  transform: scale(0.98);
+}
+#forms-ui > .container > form label span {
+  display: inline-block;
+  min-width: 5px;
+  font-size: 18px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#forms-ui > .container .form-group > input:focus + label span,
+#forms-ui > .container .form-group > input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}

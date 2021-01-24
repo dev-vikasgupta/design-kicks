@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+  --split-left-bg: rgba(87, 84, 236, 0.7);
+  --split-right-bg: rgba(43, 43, 43, 0.8);
+  --split-left-btn-hover: rgba(87, 84, 236, 1);
+  --split-right-btn-hover: rgba(28, 122, 28, 1);
+  --btn-font-color: #fff;
+  --hover-width: 75%;
+  --other-width: 25%;
+  --tr-speed: 1000ms;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#split-landing {
+  height: 100vh;
+  overflow: hidden;
+}
+#split-landing h1 {
+  font-size: 4rem;
+  color: var(--btn-font-color);
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+#split-landing .btn {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--btn-font-color);
+  border: 0.2rem solid var(--btn-font-color);
+  width: 15rem;
+  padding: 1.5rem;
+  /* For Text to be in middle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#split-landing .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+#split-landing .container .split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+#split-landing .container .split.left {
+  left: 0;
+  background-image: url('./img/ps.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#split-landing .container .split.left::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--split-left-bg);
+}
+#split-landing .container .split.left .btn:hover {
+  background-color: var(--split-left-btn-hover);
+  border-color: var(--split-left-btn-hover);
+}
+#split-landing .hover-left .left {
+  width: var(--hover-width);
+}
+#split-landing .hover-left .right {
+  width: var(--other-width);
+}
+#split-landing .hover-right .left {
+  width: var(--other-width);
+}
+#split-landing .hover-right .right {
+  width: var(--hover-width);
+}
+#split-landing .container .split.right .btn:hover {
+  background-color: var(--split-right-btn-hover);
+  border-color: var(--split-right-btn-hover);
+}
+#split-landing .container .split.right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--split-right-bg);
+}
+#split-landing .container .split.right {
+  right: 0;
+  background-image: url('./img/xbox.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* transitions on hover */
+#split-landing .left,
+#split-landing .left::before,
+#split-landing .right,
+#split-landing .right::before {
+  transition: all var(--tr-speed) ease-in-out;
+}
+/* For mobile screens */
+@media (max-width: 800px) {
+  #split-landing h1 {
+    font-size: 2rem;
+    top: 30%;
+  }
+  #split-landing .btn {
+    padding: 1.2rem;
+    width: 12rem;
+  }
+}

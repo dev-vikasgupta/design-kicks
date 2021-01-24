@@ -1,47 +1,50 @@
 // Progress Steps
 function initProgressSteps() {
-  const prev = document.getElementById('prev')
-  const next = document.getElementById('next')
-  const circles = document.querySelectorAll('.circle')
-  let currentActive = 1
-  prev.addEventListener('click', function () {
-    currentActive--
-    if (currentActive < 1) {
-      currentActive = 1
-    }
-    updateProgressSteps(currentActive, circles)
+  const projectFolders = [
+    'accordians',
+    'animated-counter',
+    'drink-water-app',
+    'forms-ui',
+    'lazy-loading',
+    'menu-animation',
+    'movie-app',
+    'nav-animation',
+    'random-choice-picker',
+    'random-quotes',
+    'scroll-animation',
+    'short-input-widget',
+    'sound-board',
+    'split-landing-page',
+    'step-counters',
+  ]
+  const projects = document.getElementById('projects')
+  const projectUIElement = `<div class="project">
+            <div class="project-details">
+                <h2>Project Name</h2>
+                <button>Live Demo</button>
+            </div>
+        </div>`
+  let projectsUI = ``
+  projectFolders.forEach((project, idx) => {
+    const projectName = project.split('-').join(' ')
+    const projectImage = `./${projectFolders[idx]}/project.png`
+    const projectUIElement = `<div class="project">
+            <img src="${projectImage}" />
+            <div class="project-details">
+                <h2>${projectName}</h2>
+                <button>Live Demo</button>
+            </div>
+        </div>`
+    projectsUI += projectUIElement
   })
-  next.addEventListener('click', function () {
-    currentActive++
-    if (currentActive > circles.length) {
-      currentActive = circles.length
-    }
-    updateProgressSteps(currentActive, circles)
+  projects.innerHTML = projectsUI
+  const project = document.querySelectorAll('.project')
+  project.forEach((p, idx) => {
+    const liveDemoButton = p.querySelector('.project-details button')
+    liveDemoButton.addEventListener('click', () => {
+      const url = `${window.location.origin}/${projectFolders[idx]}/index.html`
+      const tab = window.open(url, '_blank')
+    })
   })
-}
-function updateProgressSteps(currentActive, circles) {
-  const prev = document.getElementById('prev')
-  const next = document.getElementById('next')
-  const progress = document.getElementById('progress')
-  // Update the active state of circles
-  circles.forEach((circle, idx) => {
-    if (idx < currentActive) {
-      circle.classList.add('active')
-    } else {
-      circle.classList.remove('active')
-    }
-  })
-  const totalActive = document.querySelectorAll('.circle.active').length
-  const totalCircles = circles.length
-  const activeLineWidth = ((totalActive - 1) / (totalCircles - 1)) * 100 + '%'
-  progress.style.width = activeLineWidth
-  if (currentActive === 1) {
-    prev.disabled = true
-  } else if (currentActive === totalCircles) {
-    next.disabled = true
-  } else {
-    prev.disabled = false
-    next.disabled = false
-  }
 }
 initProgressSteps()

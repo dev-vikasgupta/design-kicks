@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, sans-serif;
+  overflow: hidden;
+}
+#sound-board {
+  background-color: rgba(161, 100, 223);
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 98vh; /* make default body height to it's view */
+  text-align: center;
+}
+#sound-board .btn {
+  background-color: rebeccapurple;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  margin: 1rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+#sound-board .btn:focus {
+  outline: none;
+}
+#sound-board .btn:hover {
+  opacity: 0.9;
+}

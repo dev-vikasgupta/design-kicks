@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 :root {
   --ps-primary: #3498db;
@@ -9,79 +11,73 @@
 body {
   font-family: 'Muli', sans-serif;
   margin: 0;
+  padding: 0;
+}
+#projects {
+  background-color: #333;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2px;
+  min-height: 100vh;
+  width: 100%;
+}
+.project {
+  position: relative;
+  cursor: pointer;
+}
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project > .project-details {
+  position: absolute;
+  top: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh; /* make default body height to it's view */
-  overflow: hidden;
-}
-.container {
-  text-align: center;
-}
-.progress-container {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin-bottom: 30px;
-  max-width: 100%;
-  width: 350px;
-}
-.progress-container::before {
-  content: '';
-  background-color: var(--ps-secondary);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 4px;
+  align-items: center;
+  background-color: #9803ff;
+  color: #fafafa;
   width: 100%;
-  z-index: -1;
+  height: 100%;
+  transition: opacity 0.3s ease-in;
+  opacity: 0;
 }
-.progress {
-  background-color: var(--ps-primary);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 4px;
-  width: 0%;
-  z-index: -1;
-  transition: 0.4s ease;
+.project-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
 }
-.circle {
-  background-color: #fff;
-  color: #999;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid var(--ps-secondary);
-  transition: 0.4s ease;
-}
-.circle.active {
-  border-color: var(--ps-primary);
-}
-.btn {
-  background-color: var(--ps-primary);
-  color: #fff;
-  border-radius: 6px;
-  border: 0;
-  cursor: pointer;
+.project-details button {
+  background-color: #44038c;
+  font-size: 1em;
   font-family: inherit;
-  padding: 8px 30px;
-  margin: 5px;
-  font-size: 14px;
+  padding: 1em 1.5em;
+  color: #fafafa;
+  border: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
 }
-.btn.active {
-  transform: scale(0.98);
+.project-details button:focus {
+  outline: none;
 }
-.btn:focus {
-  outline: 0;
+.project:hover > .project-details {
+  opacity: 1;
 }
-.btn:disabled {
-  background-color: var(--ps-secondary);
-  cursor: not-allowed;
+
+@media (max-width: 960px) {
+  #projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  #projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  #projects {
+    grid-template-columns: 1fr;
+  }
 }
