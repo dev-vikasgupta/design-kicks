@@ -1,6 +1,7 @@
 // Progress Steps
 function initProgressSteps() {
   const projectFolders = [
+    'background-slider',
     'accordians',
     'animated-counter',
     'drink-water-app',
