@@ -65,7 +65,17 @@ body {
 .project:hover > .project-details {
   opacity: 1;
 }
-
+.projectTitle {
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fafafa;
+  font-weight: bold;
+  text-transform: capitalize;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+}
 @media (max-width: 960px) {
   #projects {
     grid-template-columns: repeat(3, 1fr);

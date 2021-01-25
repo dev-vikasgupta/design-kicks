@@ -18,17 +18,12 @@ function initProgressSteps() {
     'step-counters',
   ]
   const projects = document.getElementById('projects')
-  const projectUIElement = `<div class="project">
-            <div class="project-details">
-                <h2>Project Name</h2>
-                <button>Live Demo</button>
-            </div>
-        </div>`
   let projectsUI = ``
   projectFolders.forEach((project, idx) => {
     const projectName = project.split('-').join(' ')
     const projectImage = `./${projectFolders[idx]}/project.png`
     const projectUIElement = `<div class="project">
+            <div class="projectTitle">${projectName}</div>
             <img src="${projectImage}" />
             <div class="project-details">
                 <h2>${projectName}</h2>
