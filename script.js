@@ -1,6 +1,7 @@
 // Progress Steps
 function initProgressSteps() {
   const projectFolders = [
+    'analog-clock',
     'background-slider',
     'accordians',
     'animated-counter',
