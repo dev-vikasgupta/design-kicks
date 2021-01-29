@@ -13,6 +13,7 @@ function initProgressSteps() {
     'nav-animation',
     'random-choice-picker',
     'random-quotes',
+    'ripple-effect',
     'scroll-animation',
     'short-input-widget',
     'sound-board',
