@@ -25,6 +25,15 @@ body {
   cursor: pointer;
 }
 
+.hold {
+  border: 5px solid #ccc;
+}
+
+.hover {
+  background-color: #333;
+  border: dashed #fff;
+}
+
 @media (max-width: 800px) {
   body {
     flex-direction: column;
