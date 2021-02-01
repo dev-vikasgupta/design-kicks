@@ -3,6 +3,7 @@ function initProgressSteps() {
   const projectFolders = [
     'analog-clock',
     'background-slider',
+    'drag-n-drop',
     'accordians',
     'animated-counter',
     'drink-water-app',
