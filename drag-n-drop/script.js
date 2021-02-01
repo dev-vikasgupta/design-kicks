@@ -23,19 +23,18 @@
     this.className = 'fill'
   }
 
-  function dragEnter() {
-    console.log('Enter')
+  function dragEnter(e) {
+    e.preventDefault()
   }
 
-  function dragLeave() {
-    console.log('Leave')
-  }
+  function dragLeave(e) {}
 
-  function dragOver() {
-    console.log('Over')
+  function dragOver(e) {
+    e.preventDefault()
   }
 
   function dragDrop() {
-    console.log('Drop')
+    this.className = 'empty' // 1. Make the place empty
+    this.append(draggableItem) // 2. Add the draggable item to the box
   }
 })()
