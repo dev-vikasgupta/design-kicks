@@ -3,12 +3,25 @@
 }
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
   height: 100vh;
   overflow: hidden;
   background-color: #686ef0;
+}
+h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 .empty {
   width: 150px;
@@ -35,7 +48,7 @@ body {
 }
 
 @media (max-width: 800px) {
-  body {
+  .container {
     flex-direction: column;
   }
 }
