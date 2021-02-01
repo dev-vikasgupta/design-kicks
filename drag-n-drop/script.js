@@ -25,10 +25,13 @@
 
   function dragEnter(e) {
     e.preventDefault()
+    this.className += ' hover-shadow'
   }
 
-  function dragLeave(e) {}
-
+  function dragLeave(e) {
+    this.className = 'empty'
+  }
+  // default behaviour of dragover is to prevent dropping over the box
   function dragOver(e) {
     e.preventDefault()
   }
