@@ -12,3 +12,35 @@ body {
   height: 100vh;
   margin: 0;
 }
+canvas {
+  border: 2px solid steelblue;
+}
+.toolbox {
+  background-color: slateblue;
+  border: 1px solid slateblue;
+  display: flex;
+  width: 804px;
+  padding: 1rem;
+}
+.toolbox > * {
+  background-color: #fff;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+.toolbox > *:last-child {
+  margin-left: auto;
+}
+.toolbox > *:focus {
+  outline: none;
+}
+.toolbox > span {
+  cursor: initial;
+}
