@@ -4,6 +4,7 @@ function initProgressSteps() {
     'analog-clock',
     'background-slider',
     'drag-n-drop',
+    'drawing-pad',
     'accordians',
     'animated-counter',
     'drink-water-app',
