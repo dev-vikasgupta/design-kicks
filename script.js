@@ -9,6 +9,7 @@ function initProgressSteps() {
     'animated-counter',
     'drink-water-app',
     'forms-ui',
+    'loading-icon',
     'lazy-loading',
     'menu-animation',
     'movie-app',
