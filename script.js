@@ -9,6 +9,7 @@ function initProgressSteps() {
     'drink-water-app',
     'loading-icon',
     'content-placeholder',
+    'sticky-nav',
     'accordians',
     'forms-ui',
     'lazy-loading',
