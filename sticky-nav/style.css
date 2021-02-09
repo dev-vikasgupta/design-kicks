@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Roboto, sans-serif;
+  color: #222;
+  margin: 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #222;
+  transition: all 0.3s ease-in-out;
+}
+.nav > .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+}
+.logo > a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s;
+  padding: 0.5rem;
+}
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+.nav ul li {
+  padding: 0 0.5rem;
+}
+.nav ul li a {
+  color: #fff;
+  transition: all 0.5s;
+  text-decoration: none;
+  padding: 0.5rem 0.7rem;
+}
+.nav a:hover,
+.nav a.active {
+  color: #c0392a;
+}
+
+.nav.active {
+  background-color: #fff;
+}
+.nav.active .container {
+  padding: 0.75rem 0;
+}
+.nav.active a {
+  color: black;
+  font-weight: bold;
+}
+.nav.active a:hover,
+.nav.active a.active {
+  color: #c0392a;
+}
+
+.hero {
+  background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 20px;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin: -20px 0 20px;
+}
+.hero p {
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+.content h2,
+.content h3 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+.content p {
+  color: #555;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+}
