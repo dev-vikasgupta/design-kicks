@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@200;400&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Muli, sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #639;
+}
+.btn {
+  background-color: #fff;
+  color: #639;
+  padding: 0.8rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn:focus {
+  outline: none;
+}
+.toasts {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.toast {
+  background-color: #fff;
+  color: #639;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 3px;
+  margin: 5px 15px;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.toast.info {
+  color: #138496;
+}
+.toast.danger {
+  color: #dc3545;
+}
+.toast.success {
+  color: #218838;
+}
+.toast.warning {
+  color: #e0a800;
+}

@@ -24,6 +24,7 @@ function initProgressSteps() {
     'short-input-widget',
     'sound-board',
     'split-landing-page',
+    'toast-notification',
     'step-counters',
   ]
   const projects = document.getElementById('projects')
