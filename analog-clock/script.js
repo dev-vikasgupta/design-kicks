@@ -56,7 +56,7 @@
       hour = hour % 12
     }
     const min = date.getMinutes()
-    const sec = date.getSeconds()
+    const sec = min * 60 + date.getSeconds()
 
     const day = date.getDay()
     const month = date.getMonth()
