@@ -15,6 +15,7 @@ function initProgressSteps() {
     'forms-ui',
     'lazy-loading',
     'menu-animation',
+    'github-profiles',
     'movie-app',
     'nav-animation',
     'random-choice-picker',
@@ -47,7 +48,7 @@ function initProgressSteps() {
   project.forEach((p, idx) => {
     const liveDemoButton = p.querySelector('.project-details button')
     liveDemoButton.addEventListener('click', () => {
-      const url = `${window.location.origin}/${projectFolders[idx]}/index.html`
+      const url = `${window.location.origin}/${projectFolders[idx]}`
       const tab = window.open(url, '_blank')
     })
   })
