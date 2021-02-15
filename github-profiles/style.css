@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #2a2a72;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.user-form {
+  width: 100%;
+  max-width: 700px;
+}
+
+.user-form input {
+  width: 100%;
+  display: block;
+  background-color: #4c2885;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1.1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.user-form input::placeholder {
+  color: #bbb;
+}
+.user-form input:focus {
+  outline: none;
+}
+
+.card {
+  max-width: 800px;
+  background-color: #4c2885;
+  padding: 3rem;
+  margin: 0 1.5rem;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  border: 10px solid #2a2a72;
+  border-radius: 100px;
+}
+.user-info {
+  color: #eee;
+  margin-left: 2rem;
+}
+.user-info h2 {
+  margin-top: 0;
+  text-transform: capitalize;
+}
+.user-info p {
+  padding: 0.5rem 0;
+}
+.user-info ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 400px;
+}
+.user-info ul li {
+  display: flex;
+  align-items: center;
+}
+.user-info ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+.repos {
+  display: flex;
+}
+.repo {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  background-color: #2a2a72;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .user-form {
+    max-width: 400px;
+  }
+}
