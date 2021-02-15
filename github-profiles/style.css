@@ -73,6 +73,7 @@ body {
 .user-info ul li {
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 .user-info ul li strong {
   font-size: 0.9rem;
@@ -80,6 +81,7 @@ body {
 }
 .repos {
   display: flex;
+  flex-wrap: wrap;
 }
 .repo {
   text-decoration: none;
