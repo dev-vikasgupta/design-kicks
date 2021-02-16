@@ -10,12 +10,21 @@ const image = {
   selected: 'v1',
 }
 const imageFlag = false
-likeMe.addEventListener('dblclick', (e) => {
-  likePic()
-})
-footerLike.addEventListener('dblclick', (e) => {
-  likePic()
-})
+let alreadyClick = false
+let lastClick = 0
+likeMe.addEventListener('click', simulateDoubleClick)
+footerLike.addEventListener('click', simulateDoubleClick)
+function simulateDoubleClick(params) {
+  const nowTime = new Date()
+  if (alreadyClick && (nowTime - lastClick < 500)) {
+    alreadyClick = false
+    lastClick = 0
+    likePic()
+  } else {
+    alreadyClick = true
+    lastClick = Date.now()
+  }
+}
 function likePic() {
   heartInsidePic.classList.add('show')
   heartInsidePic.classList.add('animation')
