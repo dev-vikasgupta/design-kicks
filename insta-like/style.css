@@ -38,8 +38,19 @@ small {
   font-size: 2.5rem;
   color: rgba(255, 255, 255, 0.9);
 }
-.likeMe:focus {
-  outline: none;
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px 10px;
+}
+.footer .fas {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+}
+.footer .fas.active {
+  color: red;
+  animation: grow 0.5s linear;
 }
 .animation {
   animation: grow 0.5s linear;
