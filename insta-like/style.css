@@ -26,17 +26,31 @@ small {
   background: url('https://picsum.photos/300/440') no-repeat,
     center center/cover;
   cursor: pointer;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.show {
+  display: block !important;
 }
 .likeMe .fa-heart {
-  position: absolute;
-  animation: grow 0.6 linear;
-  transform: translate(-50%, -50%) scale(0);
+  display: none;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
 }
-
+.likeMe:focus {
+  outline: none;
+}
+.animation {
+  animation: grow 0.5s linear;
+}
 @keyframes grow {
+  50% {
+    transform: scale(1.5);
+    opacity: 0.9;
+  }
   to {
-    transform: translate(-50%, -50%) scale(10);
-    opacity: 0;
+    transform: scale(1);
+    opacity: 1;
   }
 }
