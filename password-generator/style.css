@@ -1,4 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
 * {
   box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #3b3b98;
+  color: #fff;
+  font-family: Muli, sans-serif;
+}
+.container {
+  width: 350px;
+  max-width: 100%;
+  background-color: #23235b;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.container h2 {
+  font-family: inherit;
+  text-align: center;
+}
+.result-container {
+  background-color: #151537;
+  display: flex;
+  padding: 0.3rem;
+  height: 50px;
+  letter-spacing: 0.8px;
+}
+.result-container .result {
+  width: 100%;
+  font-family: inherit;
+  padding: 0.5rem 0.3rem;
+  font-size: 1.1rem;
+}
+.btn {
+  background-color: #3b3b98;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+}
+.fa-clipboard {
+  font-size: 1.2rem;
+}
+.settings {
+  display: flex;
+  flex-direction: column;
+  margin: 0.8rem 0;
+}
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+  font-family: inherit;
+}
+input[type='checkbox'] {
+  cursor: pointer;
+}
+.btn-large {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
 }
