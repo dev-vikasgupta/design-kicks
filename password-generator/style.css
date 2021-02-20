@@ -66,6 +66,9 @@ input[type='checkbox']:focus {
   cursor: pointer;
   animation: zoom 0.2s ease-in-out backwards;
 }
+input[type='number']:invalid {
+  border: red;
+}
 @keyframes zoom {
   to {
     transform: scale(1.5);

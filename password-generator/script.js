@@ -21,6 +21,9 @@ generateBtn.addEventListener('click', () => {
     length
   )
 })
+
+clipboardEl.addEventListener('click', copyToClipboard)
+lengthEl.addEventListener('keypress', checkOutOfRange)
 const randomFn = {
   lower: getRandomLower,
   upper: getRandomUpper,
@@ -40,7 +43,28 @@ function generatePassword(upper, lower, number, symbol, length) {
       result += randomFn[typeOfCharacter]()
     })
   }
+  result = result.slice(0, length)
   return result
+}
+
+function copyToClipboard() {
+  const generatedPwd = resultEl.innerText
+  if (!generatedPwd.length) return
+  const textAreaEl = document.createElement('textarea')
+  textAreaEl.value = generatedPwd
+  document.body.append(textAreaEl)
+  textAreaEl.select()
+  document.execCommand('copy')
+  alert('Password is copied to clipboard')
+  textAreaEl.remove()
+}
+
+function checkOutOfRange(ev) {
+  const isItNotDigit = ev.charCode < 48 || ev.charCode > 57
+  const isItGreaterThanMax = +(this.value + (ev.charCode - 48)) > +this.max
+  if (isItNotDigit || isItGreaterThanMax) {
+    ev.preventDefault()
+  }
 }
 function getRandomLower() {
   /** 
