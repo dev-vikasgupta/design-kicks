@@ -8,6 +8,7 @@ function initProgressSteps() {
     'drawing-pad',
     'animated-counter',
     'drink-water-app',
+    'password-generator',
     'loading-icon',
     'content-placeholder',
     'insta-like',
