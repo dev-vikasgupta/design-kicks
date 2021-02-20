@@ -62,6 +62,15 @@ body {
 input[type='checkbox'] {
   cursor: pointer;
 }
+input[type='checkbox']:focus {
+  cursor: pointer;
+  animation: zoom 0.2s ease-in-out backwards;
+}
+@keyframes zoom {
+  to {
+    transform: scale(1.5);
+  }
+}
 .btn-large {
   width: 100%;
   font-family: inherit;
