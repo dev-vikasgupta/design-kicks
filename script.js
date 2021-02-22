@@ -13,6 +13,7 @@ function initProgressSteps() {
     'content-placeholder',
     'insta-like',
     'accordians',
+    'custom-checkboxes',
     'auto-typing-effect',
     'sticky-nav',
     'forms-ui',
