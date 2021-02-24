@@ -12,7 +12,7 @@ body {
 }
 
 button {
-  background-color: #9ec862;
+  background-color: transparent;
   color: #fff;
   border: none;
   padding: 0.5rem 0.7rem;
@@ -25,6 +25,7 @@ button:focus {
   position: fixed;
   top: 1rem;
   right: 1rem;
+  background-color: #9ec862;
 }
 .note {
   width: 400px;
@@ -37,11 +38,15 @@ button:focus {
 .tools {
   display: flex;
   justify-content: flex-end;
-  background-color: #9ec862;
+  background-color: seagreen;
 }
 
 .tools i {
   font-size: 1rem;
+}
+.main * {
+  word-break: break-all;
+  padding: 0 1rem;
 }
 textarea {
   height: calc(100% - 30px);
@@ -55,4 +60,7 @@ textarea {
 }
 textarea:focus {
   outline: none;
+}
+.hidden {
+  display: none;
 }
