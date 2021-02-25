@@ -38,15 +38,28 @@ button:focus {
 .tools {
   display: flex;
   justify-content: flex-end;
+  background-color: #9ec862;
+}
+.tools.save {
   background-color: seagreen;
 }
-
 .tools i {
   font-size: 1rem;
+}
+.main {
+  cursor: not-allowed;
+  height: calc(100% - 3rem);
 }
 .main * {
   word-break: break-all;
   padding: 0 1rem;
+  color: grey;
+}
+
+.main strong,
+.main em {
+  margin: 0;
+  padding: 0;
 }
 textarea {
   height: calc(100% - 30px);
