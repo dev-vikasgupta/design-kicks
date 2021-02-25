@@ -6,6 +6,7 @@ function initProgressSteps() {
     'vertical-slider',
     'drag-n-drop',
     'drawing-pad',
+    'notes-app',
     'animated-counter',
     'drink-water-app',
     'password-generator',
