@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+  --translate-center: translate(-50%, -50%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+.align-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: var(--translate-center);
+  text-align: center;
+}
+
+.align-center.counter.hide {
+  transform: var(--translate-center) scale(0);
+  animation: hide 0.2s ease-out;
+}
+
+@keyframes hide {
+  from {
+    transform: var(--translate-center) scale(1);
+  }
+  to {
+    transform: var(--translate-center) scale(0);
+  }
+}
+.align-center.final {
+  transform: var(--translate-center) scale(0);
+}
+.align-center.final.show {
+  transform: var(--translate-center) scale(1);
+  animation: show 0.2s ease-out;
+}
+@keyframes show {
+  from {
+    transform: var(--translate-center) scale(0);
+  }
+  30% {
+    transform: var(--translate-center) scale(1.4);
+  }
+  to {
+    transform: var(--translate-center) scale(1);
+  }
+}
