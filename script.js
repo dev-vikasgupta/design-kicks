@@ -10,6 +10,7 @@ function initProgressSteps() {
     'animated-counter',
     'drink-water-app',
     'password-generator',
+    'animated-countdown',
     'loading-icon',
     'content-placeholder',
     'insta-like',
