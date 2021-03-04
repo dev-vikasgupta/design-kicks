@@ -4,6 +4,7 @@ function initProgressSteps() {
     'analog-clock',
     'background-slider',
     'vertical-slider',
+    'product-carousel',
     'drag-n-drop',
     'drawing-pad',
     'notes-app',
