@@ -3,7 +3,9 @@
 }
 body {
   background-color: #111;
+  color: #1fa;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -14,9 +16,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   max-width: 50%;
-  margin: auto;
 }
 .container > .square {
   background-color: #1d1d1d;
@@ -25,6 +26,7 @@ body {
   height: 16px;
   margin: 2px;
   transition: 2s ease;
+  cursor: pointer;
 }
 
 .square:hover {
