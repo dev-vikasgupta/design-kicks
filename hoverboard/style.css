@@ -17,7 +17,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 50%;
+  width: 70%;
+  max-width: 500px;
 }
 .container > .square {
   background-color: #1d1d1d;
