@@ -16,6 +16,7 @@ function initProgressSteps() {
     'content-placeholder',
     'insta-like',
     'accordians',
+    'hoverboard',
     'custom-checkboxes',
     'auto-typing-effect',
     'sticky-nav',
