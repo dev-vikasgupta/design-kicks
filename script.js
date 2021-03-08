@@ -14,6 +14,7 @@ function initProgressSteps() {
     'animated-countdown',
     'loading-icon',
     'content-placeholder',
+    'mobile-tab-navbar',
     'insta-like',
     'accordians',
     'hoverboard',
