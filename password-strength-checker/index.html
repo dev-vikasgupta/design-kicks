@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css" integrity="sha512-wl80ucxCRpLkfaCnbM88y4AxnutbGk327762eM9E/rRTvY/ZGAHWMZrYUq66VQBYMIYDFpDdJAOGSLyIPHZ2IQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background" id="background"></div>
+    <div class="bg-white rounded p-10 text-center shadow-md">
+        <h1 class="text-3xl">Image Password Strength</h1>
+        <p class="text-sm text-gray-700">Change password to see effect in image behind.</p>
+        <div class="my-4 text-left">
+            <label for="email" class="text-gray-900">Email</label>
+            <input type="text" class="border block w-full p-2 mt-2 rounded" id="email" placeholder="Enter Email">
+        </div>
+        <div class="my-4 text-left">
+            <label for="password" class="text-gray-900">Password</label>
+            <input type="password" class="border block w-full p-2 mt-2 rounded" id="email" placeholder="Enter Password">
+        </div>
+        <button class="bg-black text-white py-2 mt-4 w-full rounded" type="submit">Submit</button>
+    </div>
+    <script src="script.js"></script>    
+</body>
+</html>
