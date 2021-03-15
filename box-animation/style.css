@@ -6,6 +6,8 @@
   --bg: hsl(0, 0%, 98%);
   --primary: hsl(50, 95%, 50%);
   --secondary: hsl(50, 95%, 76%);
+  --bg-pos-x: 500px;
+  --bg-pos-y: 500px;
 }
 body {
   background-color: var(--bg);
@@ -29,7 +31,7 @@ body {
   position: fixed;
   top: 20px;
   letter-spacing: 1px;
-  box-shadow: 0 3px var(--secondary)
+  box-shadow: 0 3px var(--secondary);
   z-index: 10;
 }
 .magic:focus {
@@ -61,7 +63,7 @@ body {
 .box {
   background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif');
   background-repeat: no-repeat;
-  background-size: 500px 500px;
+  background-size: var(--bg-pos-x) var(--bg-pos-y);
   position: relative;
   width: 125px;
   height: 125px;
