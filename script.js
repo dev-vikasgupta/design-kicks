@@ -12,6 +12,7 @@ function initProgressSteps() {
     'drink-water-app',
     'password-generator',
     'password-strength-checker',
+    'verify-otp-ui',
     'animated-countdown',
     'loading-icon',
     'content-placeholder',
