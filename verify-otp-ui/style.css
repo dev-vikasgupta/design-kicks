@@ -16,7 +16,7 @@ body {
 }
 .container {
   width: 100%;
-  max-width: 680px;
+  max-width: 720px;
   padding: 2.5rem;
   border: 2px solid;
   border-radius: 3px;
@@ -30,13 +30,12 @@ body {
 .code {
   font-size: 5rem;
   width: 2ch;
+  margin: 1rem;
   padding: 1rem 1.2rem;
   border: 1px solid #eee;
   text-align: center;
 }
-.code:not(:last-child) {
-  margin-right: 1rem;
-}
+
 .code:valid {
   border: 1px solid #3498db;
   box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
@@ -52,4 +51,12 @@ body {
 }
 .code {
   -moz-appearance: textfield;
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 450px;
+  }
+  .code-container.center {
+    flex-wrap: wrap;
+  }
 }
