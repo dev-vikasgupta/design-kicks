@@ -33,6 +33,7 @@ function initProgressSteps() {
     'random-choice-picker',
     'random-quotes',
     'ripple-effect',
+    'user-list-ui',
     'scroll-animation',
     'short-input-widget',
     'sound-board',
